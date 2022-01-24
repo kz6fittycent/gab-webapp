@@ -1,0 +1,37 @@
+name: gab
+version: '1.0'
+summary: A webapp for Gab.com
+description: |
+  A webapp for Gab.com
+  
+license: MIT
+
+assumes:
+  - command-chain
+  
+base: core20
+grade: stable
+confinement: strict
+compression: lzo
+
+apps:
+  gab:
+    command: Gab
+    command-chain: 
+      - bin/homeishome-launch    
+    plugs:
+      - network
+      - opengl
+      - audio-playback
+      - browser-support
+      - home
+      
+parts:
+  launcher:
+    plugin: dump
+    source: .
+    
+  homeishome-launch:
+    plugin: nil
+    stage-snaps:
+      - homeishome-launch    
