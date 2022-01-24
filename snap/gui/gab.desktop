@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Gab
+Comment=WebApp for Gab
+Exec=gab
+Icon=${SNAP}/meta/gui/icon.png
+Terminal=false
+Categories=Utility;
+Keywords=gab;
