@@ -9,10 +9,9 @@ license: MIT
 assumes:
   - command-chain
   
-base: core20
+base: core18
 grade: stable
 confinement: strict
-compression: lzo
 
 parts:
   gab:
