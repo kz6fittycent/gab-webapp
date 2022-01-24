@@ -1,0 +1,18 @@
+#!/bin/sh
+
+GAB='Gab-linux-x64'
+
+cd $SNAP_USER_COMMON
+
+if [ -d "$GAB" ]
+
+then 
+
+  ./Gab-linux-x64/Gab
+
+else
+
+  nativefier --conceal --tray --name "Gab" "https://www.gab.com/"
+  ./${GAB}/Gab
+  
+fi

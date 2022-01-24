@@ -9,13 +9,30 @@ license: MIT
 assumes:
   - command-chain
   
-base: core18
+base: core20
 grade: stable
 confinement: strict
 
+apps:
+  gab:
+    command: launch
+    command-chain: 
+      - bin/homeishome-launch
+    plugs:
+      - network
+      - home
+      
 parts:
   gab:
-    plugin: nil
+    plugin: dump
+    source: scripts
+    after: 
+      - nativefier
+    
+  nativefier:
+    source: https://github.com/gfpacheco/Nativefier
+    plugin: npm
+    npm-node-version: latest
     
   homeishome-launch:
     plugin: nil
