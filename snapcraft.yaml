@@ -14,24 +14,11 @@ grade: stable
 confinement: strict
 compression: lzo
 
-apps:
-  gab:
-    command: Gab
-    command-chain: 
-      - bin/homeishome-launch    
-    plugs:
-      - network
-      - opengl
-      - audio-playback
-      - browser-support
-      - home
-      
 parts:
-  launcher:
-    plugin: dump
-    source: .
+  gab:
+    plugin: nil
     
   homeishome-launch:
     plugin: nil
     stage-snaps:
-      - homeishome-launch    
+      - homeishome-launch

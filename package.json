@@ -1,0 +1,61 @@
+{
+  "name": "gab",
+  "version": "1.0",
+  "description": "An unofficial Gab client for Linux",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "generate:icons": "./ico.sh",
+    "build:snap": "electron-builder build --linux",
+    "build:platform": "electron-builder --linux --x64 --armv7l",
+    "build:tar": "electron-builder --linux tar.xz",
+    "build:win": "electron-builder --windows nsis"
+  },
+  "repository": "https://github.com/kz6fittycent/gab-webapp",
+  "build": {
+    "win": {
+      "target": "nsis",
+      "icon": "./images/icons/win/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false
+    },
+    "dmg": {
+      "icon": "./images/icons/mac/icon.icns"
+    },
+    "linux": {
+      "icon": "./images/icons/png/256x256.png",
+      "category": "social",
+      "target": [
+        {
+          "target": "snap",
+          "arch": [
+            "x64",
+            "armv7l",
+            "ia32",
+            "arm64"
+          ]
+        }
+      ]
+    }
+  },
+  "keywords": [
+    "Whatsapp",
+    "social life",
+    "social networking",
+    "social"
+  ],
+  "author": "kz6fittycent",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^11.5.0",
+    "electron-builder": "^22.13.1",
+    "electron-reloader": "^1.2.1"
+  },
+  "dependencies": {
+    "electron-context-menu": "^2.0.0",
+    "electron-is-dev": "^1.2.0",
+    "electron-localshortcut": "^3.2.1",
+    "electron-store": "^5.1.1"
+  }
+}

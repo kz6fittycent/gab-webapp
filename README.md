@@ -1,2 +1,3 @@
-# gab-webapp
-A web app for Gab.com
+# GAB-WEBAPP
+
+A webapp for Gab.com
