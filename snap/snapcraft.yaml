@@ -30,10 +30,12 @@ parts:
       - nativefier
     
   nativefier:
-    source: https://github.com/gfpacheco/Nativefier
-    source-type: git
-    plugin: npm
-    npm-node-version: latest
+    plugin: nil
+    build-packages:
+      - npm
+    
+    override-build: |
+      npm install -g nativefier
     
   homeishome-launch:
     plugin: nil
