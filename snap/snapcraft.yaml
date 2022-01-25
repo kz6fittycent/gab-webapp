@@ -30,17 +30,23 @@ parts:
       - nativefier
     
   nativefier:
-    plugin: npm
-    npm-node-version: "16.13.2"
+    plugin: nil
     source: https://github.com/nativefier/nativefier.git
     source-type: git
-    build-environment:
-      - npm_config_global: 'true'
-    
     build-packages:
       - git
       - npm
     
+    override-build: |
+    
+      # Using Ogra's workaround - in part
+      
+      npm install nativefier -g 
+           
+      # copy node and npm
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
+      cp -av $SNAPCRAFT_PART_SRC/* $SNAPCRAFT_PART_INSTALL/bin/
+   
   homeishome-launch:
     plugin: nil
     stage-snaps:
