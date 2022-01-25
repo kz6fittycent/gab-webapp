@@ -43,9 +43,9 @@ parts:
       
       npm install nativefier -g 
            
-      # copy node and npm
-      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
-      cp -av $SNAPCRAFT_PART_SRC/* $SNAPCRAFT_PART_INSTALL/bin/
+      # copy stuff
+      
+      cp -r $SNAPCRAFT_PART_SRC/* $SNAPCRAFT_PART_INSTALL/
    
   homeishome-launch:
     plugin: nil
