@@ -31,12 +31,13 @@ parts:
     
   nativefier:
     plugin: npm
-    npm-node-version: latest
-    source: https://github.com/nativefier/nativefier/archive/refs/tags/v46.0.4.tar.gz
+    npm-node-version: "16.13.2"
+    source: https://github.com/nativefier/nativefier.git
     source-type: git
     
     build-packages:
       - git
+      - npm
     
   homeishome-launch:
     plugin: nil
