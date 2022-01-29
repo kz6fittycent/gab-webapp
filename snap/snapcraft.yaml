@@ -26,6 +26,12 @@ apps:
       - audio-playback
       - browser-support
       - home
+      - desktop
+      - desktop-legacy
+      - x11
+      - wayland
+      - alsa
+      - pulseaudio      
       
 parts:
   gab:
@@ -35,8 +41,6 @@ parts:
       - nativefier
     stage-snaps:
       - nativefier
-    stage-packages:
-      - libnss3
       
   homeishome-launch:
     plugin: nil
