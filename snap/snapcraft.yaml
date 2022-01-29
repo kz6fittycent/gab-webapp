@@ -18,8 +18,13 @@ apps:
     command: launch
     command-chain: 
       - bin/homeishome-launch
+    extensions:
+      - gnome-3-38      
     plugs:
       - network
+      - opengl
+      - audio-playback
+      - browser-support
       - home
       
 parts:
