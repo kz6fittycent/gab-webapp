@@ -26,7 +26,11 @@ parts:
   gab:
     plugin: dump
     source: scripts
+    
     build-snaps:
+      - nativefier
+      
+    stage-snaps:
       - nativefier
    
   homeishome-launch:
