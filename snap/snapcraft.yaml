@@ -26,26 +26,8 @@ parts:
   gab:
     plugin: dump
     source: scripts
-    after: 
+    build-snaps:
       - nativefier
-    
-  nativefier:
-    plugin: nil
-    source: https://github.com/nativefier/nativefier.git
-    source-type: git
-    build-packages:
-      - git
-      - npm
-    
-    override-build: |
-    
-      # Using Ogra's workaround - in part
-      
-      npm install nativefier -g 
-           
-      # copy stuff
-      
-      cp -r $SNAPCRAFT_PART_SRC/* $SNAPCRAFT_PART_INSTALL/
    
   homeishome-launch:
     plugin: nil
