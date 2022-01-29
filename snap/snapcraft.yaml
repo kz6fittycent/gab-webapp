@@ -31,13 +31,13 @@ parts:
   gab:
     plugin: dump
     source: scripts
-    
     build-snaps:
       - nativefier
-      
     stage-snaps:
       - nativefier
-   
+    stage-packages:
+      - libnss3
+      
   homeishome-launch:
     plugin: nil
     stage-snaps:
