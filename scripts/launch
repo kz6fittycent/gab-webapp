@@ -8,11 +8,11 @@ if [ -d "$GAB" ]
 
 then 
 
-  ./Gab-linux-x64/Gab
+  ./${GAB}/Gab
 
 else
 
-  nativefier --conceal --tray --name "Gab" "https://www.gab.com/"
+  $SNAP/bin/nativefier --conceal --tray --name "Gab" "https://www.gab.com/"
   ./${GAB}/Gab
   
 fi
