@@ -44,6 +44,7 @@ parts:
       
     stage-packages:
       - libnss3
+      - libpango-1.0-0
       
   homeishome-launch:
     plugin: nil
