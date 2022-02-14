@@ -54,8 +54,6 @@ parts:
       - homeishome-launch
       
   cleanup:
-    after: 
-      - launcher
     plugin: nil
     build-snaps: 
       - core20
