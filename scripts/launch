@@ -12,7 +12,7 @@ then
 
 else
 
-  $SNAP/bin/nativefier --conceal --tray --name "Gab" "https://www.gab.com/"
+  $SNAP/bin/nativefier --conceal --tray --name "Gab" "https://www.gab.com/" > /dev/null
   ./${GAB}/Gab
   
 fi
